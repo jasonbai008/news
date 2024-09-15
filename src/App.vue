@@ -3,12 +3,11 @@
     <el-tabs v-model="activeName" @tab-click="handleClick">
       <el-tab-pane label="百度热搜" name="0"></el-tab-pane>
       <el-tab-pane label="抖音热榜" name="1"></el-tab-pane>
-      <el-tab-pane label="哔哩哔哩" name="6"></el-tab-pane>
-      <el-tab-pane label="知乎" name="2"></el-tab-pane>
-      <el-tab-pane label="头条" name="4"></el-tab-pane>
-      <el-tab-pane label="微博" name="3"></el-tab-pane>
-      <el-tab-pane label="36氪" name="5"></el-tab-pane>
-      <el-tab-pane label="IT资讯" name="7"></el-tab-pane>
+      <el-tab-pane label="澎湃新闻" name="2"></el-tab-pane>
+      <el-tab-pane label="哔哩哔哩" name="3"></el-tab-pane>
+      <el-tab-pane label="知乎" name="4"></el-tab-pane>
+      <el-tab-pane label="头条" name="5"></el-tab-pane>
+      <el-tab-pane label="微博" name="6"></el-tab-pane>
     </el-tabs>
     <div class="bot-wrap" v-loading="loading" element-loading-text="拼命加载中">
       <list :listData="listData" :updateDate="updateDate" ref="newsList" />
@@ -28,7 +27,7 @@ export default {
     return {
       loading: false,
       activeName: localStorage.tabNum ? localStorage.tabNum : "0",
-      type: ["baiduRD", "douyinHot", "zhihuHot", "wbHot", "toutiao", "36Ke", "bili", "itNews"],
+      type: ["baiduRD", "douyinHot", "pengPai", "bili", "zhihuHot", "toutiao", "wbHot"],
       listData: [],
       updateDate: "",
     };
